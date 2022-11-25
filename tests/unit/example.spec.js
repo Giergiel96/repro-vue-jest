@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
+import { TEST } from '@/components/vue'
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {
@@ -8,5 +9,6 @@ describe('HelloWorld.vue', () => {
       props: { msg }
     })
     expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.text()).toMatch(TEST);
   })
 })
